@@ -33,7 +33,6 @@ import Icons from "views/Icons/Icons.js";
 import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 // core components/views for RTL layout
-import RTLPage from "views/RTLPage/RTLPage.js";
 
 const dashboardRoutes = [
   {
@@ -51,6 +50,27 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
+    path: "/icons",
+    name: "통합 - 시스템 관리",
+    icon: BubbleChart,
+    component: Icons,
+    layout: "/admin"
+  },
+  {
+    path: "/maps",
+    name: "통합 - 서버 관리",
+    icon: LocationOn,
+    component: Maps,
+    layout: "/admin"
+  },
+  {
+    path: "/notifications",
+    name: "통합 - 프로세스 관리",
+    icon: Notifications,
+    component: NotificationsPage,
+    layout: "/admin"
+  },
+  {
     path: "/table",
     name: "로그 관리",
     icon: "content_paste",
@@ -64,35 +84,6 @@ const dashboardRoutes = [
     component: Typography,
     layout: "/admin"
   }
-  //,
-  // {
-  //   path: "/icons",
-  //   name: "Icons",
-  //   icon: BubbleChart,
-  //   component: Icons,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/maps",
-  //   name: "Maps",
-  //   icon: LocationOn,
-  //   component: Maps,
-  //   layout: "/admin"
-  // },
-  // {
-  //   path: "/notifications",
-  //   name: "Notifications",
-  //   icon: Notifications,
-  //   component: NotificationsPage,
-  //   layout: "/admin"
-  // }
-  // {
-  //   path: "/rtl-page",
-  //   name: "RTL Support",
-  //   icon: Language,
-  //   component: RTLPage,
-  //   layout: "/rtl"
-  // }
 ];
 
 export default dashboardRoutes;
