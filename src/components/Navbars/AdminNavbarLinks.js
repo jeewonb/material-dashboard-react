@@ -21,9 +21,6 @@ import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-dashboard-react/components/headerLinksStyle.js";
 
-//
-import UserProfile from "views/UserProfile/UserProfile.js";
-
 const useStyles = makeStyles(styles);
 
 export default function AdminNavbarLinks() {
@@ -50,11 +47,6 @@ export default function AdminNavbarLinks() {
   const handleCloseProfile = () => {
     setOpenProfile(null);
   };
-
-  const handleOpenSetting = () => {
-    this.context.component = UserProfile;
-  };
-
   return (
     <div>
       <div className={classes.searchWrapper}>
@@ -208,15 +200,14 @@ export default function AdminNavbarLinks() {
                       Profile
                     </MenuItem>
                     <MenuItem
-                      onClick={UserProfile}
+                      onClick={handleCloseProfile}
                       className={classes.dropdownItem}
-                      // component={UserProfile}
                     >
                       Settings
                     </MenuItem>
                     <Divider light />
                     <MenuItem
-                      onClick={handleOpenSetting}
+                      onClick={handleCloseProfile}
                       className={classes.dropdownItem}
                     >
                       Logout
